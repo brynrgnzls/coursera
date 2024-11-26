@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Interest Calculator</title>
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>Simple Interest Calculator</h1>
+
+      Amount <input type="number" id="principal" /> <br />
+      Rate
+      <input
+        type="range"
+        min="1"
+        max="20"
+        step=".25"
+        value="10.25"
+        id="rate"
+        onchange="updateRate()"
+      />
+      <span id="rateval">10.25</span>% <br /_> No. of Years
+      <input type="number" id="years" list="all_years" /> <br />
+      <datalist id="all_years">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </datalist>
+      Interest : <span id="result"></span><br />
+
+      <button onclick="compute()">Compute</button>
+    </div>
+    <footer>&#169; This Calculator belongs to Bryan Gonzales</footer>
+  </body>
+</html>
